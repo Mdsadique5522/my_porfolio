@@ -1,4 +1,4 @@
-
+ 
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap"); /* Import Google Font */
 
 * { /* Apply styles to all elements */
@@ -531,89 +531,106 @@ there is problem in squezing the screen size
     }
 
 }
-.skills-container{
-    position:relative;
-    display: flex;
-    padding: 5rem;
-    
-    margin: 10rem auto ;
-    gap: 30px;
+.skills-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 2rem;
+    overflow: hidden;
+    display: flex; /* Added */
+    gap: 4rem; /* Added */
 }
-.skills-container-left{
-    width: 50%;
-    right: 10%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-}
-@media (max-width: 1300px) {
-    .skills-container-left {
-        width: 100%;
-    }
-}
-.skills-container-right{
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    left: 250px;
-    top: 20px;
-     position:relative;
-    gap: 2rem;
-    justify-content: center; 
-    
-}
- 
-.skills-feded-text{
+
+.skills-faded-text {
     position: absolute;
     font-size: 15em;
-    font-style: bold;
-    color: rgb(231,231,231);
-    bottom: -54%;
-    right: -30%;
+    font-weight: 800;
+    color: rgba(231, 231, 231, 0.8);
+    bottom: -20%;
+    right: -10%;
     user-select: none;
-    overflow-y: hidden;
-
+    z-index: -1;
 }
-.blob-style{
-      position: absolute;
-      top: 10%;
-      left: 15%;
-      z-index: -5;
-      transform: translateX(-50% ,-50%);
-      animation: blobanimation 3s linear infinite ;
 
+/* LEFT SIDE - TEXT CONTENT */
+.skills-container-left {
+    flex: 1; /* Takes 50% width */
+    padding-right: 2rem;
 }
- 
-.skills-logo{
-    width:50px;
-    /* left: 50px; */
-    transition:  all 0.5s;
 
+.skills-heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    color: #333;
 }
-/* @media (max-width: 1300px) {
+
+.caps {
+    font-size: 5rem;
+    color: #4f46e5; /* Purple accent */
+}
+
+.skills-sub-heading {
+    color: #666;
+    line-height: 1.6;
+}
+
+.skills-sub-heading p {
+    margin-bottom: 1.5rem;
+}
+
+/* RIGHT SIDE - LOGOS */
+.skills-container-right {
+    flex: 1; /* Takes 50% width */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-content: flex-start; /* Aligns logos to top */
+}
+
+.skills-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skills-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .skills-container {
+        flex-direction: column;
+    }
+    
+    .skills-container-left,
+    .skills-container-right {
+        width: 100%;
+    }
+    
+    .skills-faded-text {
+        font-size: 10em;
+        bottom: -10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        padding: 1rem;
+    }
+    
+    .skills-faded-text {
+        font-size: 8em;
+        right: -15%;
+    }
+    
     .skills-logo {
         width: 50px;
+        height: 50px;
     }
-} */
-.skills-logo:hover{
-    transform: scale(1.2);
-}
-.skils-heading{
-    font-size: 50px;
-    font-style: bold;
-    color: var(--bgOrange);
-    line-height: 50px;
-}
-.caps{
-    font-size: 100px;
-}
-.skills-sub-heading{
-    margin: 1rem;
-    width:85%; 
-    left: 0;
-
-    /* text-align: justify;    */
-
 }
 .contact-us-form-container{
     width: 100%;
@@ -725,25 +742,5 @@ gap: 1.3rem;
     color: var(--bgOrange);    
 
 }
-    /*
-    this icon-wrapper added to project card-1 icon 
-    class so there is no need of  this class
-
-
-.icon-wrapper{
-    
-    font-size: 35px;
-
-    color:rgb(255, 255, 255);
-     margin: 0 10px; 
-    cursor: pointer;
-     text-decoration: none; 
-    transition: color 0.3s ease;
-
-
-} 
-.icon-wrapper :hover {
-     color: #d43c3c;
-}
-*/
+   
  
