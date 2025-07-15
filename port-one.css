@@ -447,19 +447,19 @@ a { /* Style all anchor tags */
     transform: scale(1.1);
 }
 #project1{
-    left: 120px;
-    background-image: url(./images/Project1.png);
+    left: 100px;
+    background-image: url(./images/weather.png);
 }
 #project2{
-    right: 120px;
+    right: 80px;
     background-image: url(./images/Project2.png);
 }
 #project3{
-    left: 120px;
+    left: 100px;
     background-image: url(./images/Project3.png);
 }
 #project4{
-    right: 120px;
+    right: 80px;
     background-image: url(./images/Project4.png);
 }
 
